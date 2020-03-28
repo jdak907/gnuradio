@@ -532,6 +532,8 @@ class Application(Gtk.Application):
                     markup="Moving the variable editor requires a restart of GRC."
                 ).run_and_destroy()
                 action.save_to_preferences()
+        elif action == Actions.ZOOM_RESET:
+            page.drawing_area.reset_zoom()
         ##################################################
         # Param Modifications
         ##################################################
